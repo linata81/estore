@@ -37,19 +37,23 @@
             </div>
           </div>
 
-          <form>
+          <form action="mail.php" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Имя и Фамилия">
+              <input type="text" name ="name" class="form-control" placeholder="Имя и Фамилия">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Телефон">
+              <input type="text" name ="phone" class="form-control" placeholder="Телефон">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email">
+              <input type="email" name ="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Адрес">
+              <input type="text" name ="address" class="form-control" placeholder="Адрес">
             </div>
+
+            <input type="hidden" name ="productTitle" value="<?php echo $product['title']?>" >
+            <input type="hidden" name ="productId" value="<?php echo $product['id']?>" >
+            <input type="hidden" name ="productPrice" value="<?php echo $product['price']?>" >
 
             <div class="form-group">
               <button type="submit" class="btn btn-primary">Оформить заказ</button>

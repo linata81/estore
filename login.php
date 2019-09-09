@@ -1,4 +1,5 @@
 <?php
+  require_once('config.php');
   $pageTitle = "Вход в админку"
 ?>
 <?php include('./templates/_head.php');?>
@@ -15,15 +16,15 @@
       <!-- // header -->
 
       <div class="line-between"></div>
-      <form action="admin.html">
+      <form action="check-login.php" method="POST">
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Пароль">
+          <input value="admin" type="password" name="password" class="form-control" placeholder="Пароль">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary btn-block">Войти</button>
         </div>
       </form>
-      <p class="text-center"><a href="index.html" class="text-secondary">Вернуться назад</a></p>
+      <p class="text-center"><a href="index.php" class="text-secondary">Вернуться назад</a></p>
     </div>
   </div>
   <!-- // white-plate -->

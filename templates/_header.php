@@ -7,10 +7,18 @@
     </div>
     <div class="col-sm-6">
       <div class="admin-link">
-        <!-- <i class="fas fa-unlock-alt"></i> -->
-        <a href="./login.php">
-          <img width="38" src="img/icons/padlock.svg" alt="">
-        </a>
+        <?php if(isset($_SESSION['Login']) && $_SESSION['Login'] == 'on'): ?>
+          <a href="./admin.php">
+            <img width="38" src="img/icons/padlock.svg" alt="">
+          </a>
+          <a href="./logout.php">
+            <img width="38" src="img/icons/logout.svg" alt="">
+          </a>
+        <?php else: ?>
+          <a href="./login.php">
+            <img width="38" src="img/icons/padlock.svg" alt="">
+          </a>
+        <?php endif ?>
       </div>
     </div>
   </div>
